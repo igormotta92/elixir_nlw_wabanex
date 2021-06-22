@@ -1,0 +1,58 @@
+# Código Aula
+  #together (Aula 1)
+--------------------------------------------------------
+##Inicializando o Projeto
+  $ mix phx.new wabanex --no-html --no-webpack
+
+##Criando banco de dados
+  $ mix ecto.setup
+
+##Abrindo IEX interativo
+  -- iex -> Elixir Interativo
+  -- -S mix -> Abrindo IEX dentro do próprio projeto
+  $ iex -S mix || $ iex.bat -S mix
+
+|> Pattern Match (É o casamento dos padrões)
+  No Elixir o =(é um operador de match)
+
+  [1,x,2] = [1,2,3]
+  |> x agora é 2
+
+  {:ok, x} = File.read("students.csv")
+  |> {:ok, "\"banana\""}
+  |> x agora é o conteúdo do arquivo, "\"banana\""
+
+  {:error, x} = File.read("students22.csv")
+  |> {:error, :enoent}
+  |> x agora é o :enoent
+
+|> Chamando um modulo pelo iex
+  <nome_modulo><funcao>
+  Wabanex.IMC.calculate("students.csv")
+
+#Subindo servidor phoenix
+  $ mix phx.server
+  http://localhost:4000/dashboard
+
+###Fluxo de requisições 
+  A porta de entrada é pelas rotas.
+  \wabanex_web\router.ex
+
+Solid com Elixir
+https://www.youtube.com/watch?v=rmftOs2BzgU
+
+Livro de Elixir: Elixir in action
+____________________________________________________
+Aula 2 : 00:00:00
+
+
+
+
+
+
+
+
+
+
+
+
