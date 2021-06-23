@@ -1,6 +1,10 @@
 # Código Aula
-  #together (Aula 1)
---------------------------------------------------------
+  # together (Aula 1)
+  # unidade (Aula 2)
+
+--------------------------------------------------------------------------------
+### Aula 01 ###
+
 ##Inicializando o Projeto
   $ mix phx.new wabanex --no-html --no-webpack
 
@@ -38,12 +42,42 @@
   A porta de entrada é pelas rotas.
   \wabanex_web\router.ex
 
+### Extras
 Solid com Elixir
 https://www.youtube.com/watch?v=rmftOs2BzgU
 
 Livro de Elixir: Elixir in action
-____________________________________________________
-Aula 2 : 00:00:00
+
+#Recursão
+Tail Call Pptimization
+
+--------------------------------------------------------------------------------
+### Aula 02 ###
+
+## Criando migration
+  $ mix ecto.gen.migration create_users_table
+
+## Executar migration
+  $ mix ecto.migrate
+
+## Resetar banco de dados (drop o banco e executa todas migrations)
+  $ mix ecto.reset
+
+### Schema é quase igual a um modelo
+### Uma struct de certo modo é um map com nome %nome{}
+
+## Interação com o banco de dados
+  Toda interação com banco de dados é feita utilizando modulo [Wabanex.Repo]
+  Quando há execução de query é retornado um debug com informações da query
+  Validações podem ser em memória (validate_length, validate_format) ou execuções no banco (unique_constraint)
+
+  # Modulo schema (lib\wabanex\user.ex) que recebe os parâmetros e o lib\wabanex\repo.ex que executa as ações no banco
+
+--------------------------------------------------------------------------------
+### Aula 03 ###
+
+--
+00:00:00
 
 
 
