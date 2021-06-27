@@ -2,6 +2,7 @@
   # together (Aula 1)
   # unidade (Aula 2)
   # embuscadeevolução (Aula 3)
+  # legacy (Aula 4)
 
 --------------------------------------------------------------------------------
 ### Aula 01 ###
@@ -105,10 +106,38 @@ Tail Call Pptimization
 #Formatar o projeto todo com o comando abaixo
   |> $ mix format
 
---
-Aula: 03
+--------------------------------------------------------------------------------
+### Aula 04 ###
 
-00:32:02
+has_one -> 0,1
+has_many -> 1,N
+
+##Cadastrando treino com exercício para um usuário
+  $ iex.bat -S mix
+  $ alias Wabanex.Trainings.Create, as: TrainingCreate
+  $ params = %{start_date: "2021-06-22", end_date: "2021-07-22", 
+    exercises: [
+      %{name: "Triceps banco", youtube_video_url: "www.google.com", protocol_description: "regular", repetitions: "3x12"},
+      %{name: "Triceps corda", youtube_video_url: "www.google.com", protocol_description: "regular", repetitions: "3x12"}
+    ], user_id: "6330c9f2-4b06-465e-aa11-c50baeff1cd6"}
+  $ TrainingCreate.call(params)
+
+## Listando usuários
+  $ alias Wabanex.Repo
+  $ alias Wabanex.user
+  $ Repo.all(User)
+
+  # out |> training: #Ecto.Association.NotLoaded<association :training is not loaded>,
+
+  # Ector trabalha de forma preguiçosa (lazy). Isso quer dizer que ele só carrega as coisas solicitadas via Repo.preload([])
+  # Utilizando "Repo.preload" para carregar valores associados a esse usuário
+    $ Repo.all(User) |> Repo.preload([:training])
+
+--------------------------------------------------------------------------------
+### Aula 05 ###
+
+--
+00:00:00
 
 
 

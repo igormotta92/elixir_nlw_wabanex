@@ -2,7 +2,7 @@ defmodule WabanexWeb.Schema.Types.User do
   use Absinthe.Schema.Notation
 
   # Importando dos os tipos para desse arquivo para este modulo
-  import_types WabanexWeb.Schema.Types.Custom.UUID4
+  # import_types WabanexWeb.Schema.Types.Custom.UUID4
 
   # Password não é retornado na API (geralemente)
   @desc "Logic user represetation"
