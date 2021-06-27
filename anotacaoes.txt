@@ -1,6 +1,7 @@
 # Código Aula
   # together (Aula 1)
   # unidade (Aula 2)
+  # embuscadeevolução (Aula 3)
 
 --------------------------------------------------------------------------------
 ### Aula 01 ###
@@ -76,8 +77,38 @@ Tail Call Pptimization
 --------------------------------------------------------------------------------
 ### Aula 03 ###
 
+##GraphQL
+
+#Schema: Contrato (Define os campos que podem ser retornados)
+  - Exclamações definem que os campos não pode nulos "!" nos schemas
+#Query: Query (Serve para lê as informações do contrato)
+#Mutation: Utilizando para fazer a manipulação dos dados 
+
+  
+
+#Scalar Types:
+  - Int: 32-bit integer
+  - Float
+  - String: UTF-8
+  - Boolean: true or false
+  - ID (serialized as a String)
+
+## Tipo de API's:
+  REST,RPC, GraphQL
+
+## Absinthe
+  https://github.com/absinthe-graphql/absinthe
+
+#Baixando dependências 
+  |> $ mix deps.get
+
+#Formatar o projeto todo com o comando abaixo
+  |> $ mix format
+
 --
-00:00:00
+Aula: 03
+
+00:32:02
 
 
 

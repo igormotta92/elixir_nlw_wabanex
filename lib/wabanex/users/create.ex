@@ -3,7 +3,9 @@ defmodule Wabanex.Users.Create do
 
   def call(params) do
     params
-    |> User.changeset() # preprarar dados
-    |> Repo.insert() # persistir no banco 
+    # preprarar dados
+    |> User.changeset()
+    # persistir no banco
+    |> Repo.insert()
   end
 end

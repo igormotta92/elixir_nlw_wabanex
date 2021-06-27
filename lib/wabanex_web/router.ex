@@ -13,6 +13,16 @@ defmodule WabanexWeb.Router do
     get "/", IMCController, :index
   end
 
+  # Configurando o Absinthe com as rotas para utilizar o Graphql
+  scope "/api" do
+    pipe_through :api
+
+    # Acesso de clinetes externos
+    forward "/graphql", Absinthe.Plug, schema: WabanexWeb.Schema
+    # Acesso de clinete interno (para teste)
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: WabanexWeb.Schema
+  end
+
   # Enables LiveDashboard only for development
   #
   # If you want to use the LiveDashboard in production, you should put
