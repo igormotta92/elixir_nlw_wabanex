@@ -3,6 +3,7 @@
   # unidade (Aula 2)
   # embuscadeevolução (Aula 3)
   # legacy (Aula 4)
+  # juntos no próximo nivel (Aula 5)
 
 --------------------------------------------------------------------------------
 ### Aula 01 ###
@@ -131,10 +132,19 @@ has_many -> 1,N
 
   # Ector trabalha de forma preguiçosa (lazy). Isso quer dizer que ele só carrega as coisas solicitadas via Repo.preload([])
   # Utilizando "Repo.preload" para carregar valores associados a esse usuário
-    $ Repo.all(User) |> Repo.preload([:training])
+    $ Repo.all(User) |> Repo.preload([:trainings])
 
 --------------------------------------------------------------------------------
 ### Aula 05 ###
+
+  $ Repo.all(User) |> Repo.preload([trainings: [:exercises]])
+
+  # Mostrar todas as rotas existêntes
+  $ mix phx.routes
+
+  #Cobertura dos testes
+  $ mix test --cover
+  https://github.com/parroty/excoveralls
 
 --
 00:00:00
