@@ -19,7 +19,7 @@ defmodule Wabanex.User do
     field(:password, :string)
 
     # Usuário tem um treino
-    has_one :training, Training
+    has_many :trainings, Training
 
     timestamps()
   end
